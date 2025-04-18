@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .container {
+            background-color: #1b1b1b;
+            height: 80vh;
+            width: 90vw;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: #0085f2;
+            border-radius: 50%;
+            border: 5px solid #4e4e4e;
+        }
+        .box:hover {
+            animation-name: rotate;
+            animation-duration: 0.7s;
+            animation-delay: 2s;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="box"></div>
+     </div>
+</body>
+</html>
