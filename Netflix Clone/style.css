@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background: url("./assets/images/bg.jpg");
+  height: 70vh;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 7px solid rgb(46, 44, 44);
+}
+.main .box {
+  height: 70vh;
+  width: 100%;
+  opacity: 0.69;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 70vw;
+  margin: auto;
+  height: 62px;
+}
+nav img {
+  width: 114px;
+  color: red;
+  position: relative;
+  z-index: 10;
+}
+nav button {
+  position: relative;
+  z-index: 10;
+}
+.hero {
+  font-family: "Martel Sans", sans-serif;
+  height: calc(100% - 64px);
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  gap: 23px;
+  padding: 30px;
+}
+
+.hero > :first-child {
+  font-weight: bolder;
+  font-size: 48px;
+  text-align: center;
+}
+.hero > :nth-child(2) {
+  font-weight: 400px;
+  font-size: 24px;
+  text-align: center;
+}
+.hero > :nth-child(3) {
+  font-weight: 400px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn {
+  padding: 3px 8px;
+  font-weight: 400;
+  color: white;
+  background-color: rgba(248, 243, 243, 0.021);
+  border-radius: 4px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.btn-red {
+  background-color: red;
+  color: white;
+  padding: 3px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  font-weight: 400;
+}
+.btn-red-sm {
+  background-color: red;
+  color: white;
+}
+
+.hero-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+.main input {
+  padding: 7px 110px 8px 14px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: rgba(23, 23, 23, 0.2);
+  border: 1px solid rgba(23, 23, 23, 0.5);
+  color: white;
+}
+
+.first {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: white;
+}
+.first > div:nth-child(1) {
+  font-size: 24px;
+}
+.secImg {
+  position: relative;
+}
+
+.secImg img {
+  position: relative;
+  z-index: 10;
+}
+.secImg video {
+  position: absolute;
+  right: 76px;
+  top: 96px;
+}
+.border-bottoms {
+  width: 100vw;
+  height: 7px;
+  background-color: rgb(46, 44, 44);
+}
+.second {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: white;
+}
+.second .right :nth-child(1) {
+  font-size: 48px;
+  font-weight: bold;
+}
+.second .right :nth-child(2) {
+  font-size: 24px;
+}
+.third {
+  max-width: 70vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.third .left :nth-child(1) {
+  font-size: 48px;
+  font-weight: bold;
+}
+.third .left :nth-child(2) {
+  font-size: 18px;
+}
+.third .right {
+  position: relative;
+}
+.third .right img {
+  width: 555px;
+  position: relative;
+  z-index: 10;
+}
+.third .right video {
+  position: absolute;
+  right: 60px;
+  top: 60px;
+}
+.fourth {
+  max-width: 70vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.fourth .right :nth-child(1) {
+  font-size: 48px;
+  font-weight: bold;
+}
+.fourth .right :nth-child(2) {
+  font-size: 18px;
+}
+.faq {
+  background: black;
+  color: white;
+  padding: 34px;
+}
+.faq h2 {
+  font-size: 48px;
+  text-align: center;
+}
+.faqbox {
+  background-color: #2d2d2d;
+  max-width: 70vw;
+  margin: auto;
+  padding: 20px;
+  margin: 34px auto;
+  font-size: 24px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.faqbox svg {
+  filter: invert(1);
+}
+footer {
+  width: 70vw;
+  margin: auto;
+  padding: 60px;
+}
+footer h5 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 41px;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-item p a {
+  color: white;
+  font-size: 14px;
+}
