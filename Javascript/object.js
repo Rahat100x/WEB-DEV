@@ -1,38 +1,50 @@
-const person = {
-  x: 10,
-  firstName: "Luban",
-  lastName: "Rahat",
-  hobbies: ["Coding", "Gym"],
-  isMarried: false,
-  hasGf: false,
-  getFullName: function () {
-    return "Luban Rahat";
-  },
-  address: {
-    hon: 1,
-    street: 1,
-    coubtryCode: "BN",
-  },
-};
+// const person = {
+//   lastName: 'Rahat',
+//   hobbies: ['coding','Gym'],
+//   isMarried: false,
+//   hasGf: false,
+//   hadcrush: Infinity,
+//   getFullName: function() {
+//     return 'Luban Rahat';
+//   },
+//   address: {
+//     hono: 1,
+//     street: 1,
+//     countryCode: 'BN',
+//     state: 'Dhaka'
+//   }
+// }
 
-console.log(person.getFullName());
+// console.log(person.address.state)
+
+// const remote = {
+//   color: 'balack',
+//   brand: 'XYZ',
+//   dimensions: {height: 1,width: 1},
+//   turnOff: function() {
+
+//   },
+//   volumeUp: function() {
+
+//   }
+// }
+
+// let fname = 'Luban';
+// let fname2 = fname;
+// console.log(fname)
+// fname2 = 'Rahat'
+// console.log(fname)
 
 let p1 = {
   fname: 'Luban',
-  lname: 'Ch',
+  lname: 'Rahat',
   address: {
-    city:"Rajbari"
+    h: 1,
+    s: 1
   }
 }
 
-const p1String = JSON.stringify(p1);
-console.log(p1String);
+const p1String = JSON.stringify(p1)
+console.log(p1String)
 let p2 = JSON.parse(p1String);
-
-p2.fname = 'Rahat';
-p1.address.city = "Dhaka";
-
-console.log(p2)
-console.log(p1)
-
-
+console.log(p1);
