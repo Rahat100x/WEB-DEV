@@ -1,3 +1,1 @@
-education: {
-//     degree: "BSC - CSE",
-//   },
+prototype
