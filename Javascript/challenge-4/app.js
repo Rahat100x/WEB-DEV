@@ -1,22 +1,76 @@
-const addButton = document.getElementById('addButton');
-const taskInput = document.getElementById('taskInput');
-const taskList = document.getElementById('taskList');
-const totalTasks = document.getElementById('totalTasks');
-const completedTasks = document.getElementById('completedTasks');
+let addButton = document.getElementById("addButton");
+let taskInput = document.getElementById("taskInput");
+let taskList = document.getElementById("taskList");
+let totalTasks = document.getElementById("totalTasks");
+let completedTasks = document.getElementById("completedTasks");
+let emptyList = document.querySelector(".empty-list");
 
-addButton.addEventListener('click',() => {
-    const li = document.createElement('li');
-    const deleteBtn = document.createElement('button');
-    deleteBtn.innerText = 'Delete'
-    console.log(deleteBtn);
-    
-    li.className = 'task-item';
-    console.log(taskInput.value);
-    li.innerText = taskInput.value;
-    taskList.appendChild(li);
-    li.appendChild(deleteBtn)
+let total = 0;
+let completed = 0;
+let emptyDesplay = "";
 
-    taskInput.value = '';
-})
+addButton.addEventListener("click", () => {
+  if (taskInput.value.trim() === "" || taskInput.value === "") {
+    alert("Wright somthin!");
+    return;
+  }
+  const li = document.createElement("li");
+  li.className = "task-item";
+  li.innerHTML = `
+        <div class="task-text">
+            <input class="complete-checkbox" type="checkbox">
+            <span class="item-text">${taskInput.value}</span>
+        </div>
+        <button class="delete-button">Delete</button>
+    `;
 
-console.log('hello')
+  const checkbox = li.querySelector(".complete-checkbox");
+  const litext = li.querySelector(".item-text");
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      litext.style.textDecoration = "line-through";
+      completed++;
+      updateTaskCounters();
+      if (completed == total) {
+        alert("Congratulations👍");
+      }
+    } else {
+      litext.style.textDecoration = "none";
+      completed--;
+      updateTaskCounters();
+    }
+  });
+
+  const deleteButton = li.querySelector(".delete-button");
+  deleteButton.addEventListener("click", () => {
+    li.remove();
+    if (total === 1) {
+      emptyDesplay = "block";
+      emptyList.style.display = emptyDesplay;
+      EmptyList();
+
+      console.log(total);
+    }
+    total--;
+    updateTotalTask();
+  });
+  emptyDesplay = "none";
+  emptyList.style.display = emptyDesplay;
+  EmptyList();
+  taskList.appendChild(li);
+  total++;
+  updateTotalTask();
+
+  taskInput.value = "";
+});
+
+function updateTotalTask() {
+  totalTasks.innerText = `Total tasks: ${total}`;
+}
+function updateTaskCounters() {
+  completedTasks.innerText = `Completed: ${completed}`;
+}
+
+function EmptyList() {
+  emptyList.style.display = emptyDesplay;
+}
