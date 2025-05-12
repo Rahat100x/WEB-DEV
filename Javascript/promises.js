@@ -17,5 +17,5 @@ fetch('https://api.freeapi.app/api/v1/public/randomproducts?page=1&limit=10&inc=
         console.log('erorr');
     })
     .finally(() => {
-        
+        console.log('Hello')
     })
